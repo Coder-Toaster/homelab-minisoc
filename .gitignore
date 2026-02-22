@@ -1,0 +1,15 @@
+# keys / secrets
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+**/*private*
+**/*token*
+**/*password*
+
+# backups / exports
+*.zip
+*.tar
+*.gz
+EOF
