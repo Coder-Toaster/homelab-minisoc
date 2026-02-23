@@ -1,15 +1,31 @@
-# keys / secrets
-*.key
-*.pem
-*.p12
-*.pfx
-secrets/
-**/*private*
+# ---- Secrets / keys / tokens ----
+**/*.key
+**/*.pem
+**/*.p12
+**/*.pfx
+**/secrets/**
 **/*token*
 **/*password*
+**/*private*
+**/.env
+**/.env.*
 
-# backups / exports
-*.zip
-*.tar
-*.gz
-EOF
+# ---- SSH keys (defensive) ----
+**/.ssh/**
+!**/.ssh/config
+
+# ---- Editor / OS junk ----
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# ---- Logs / dumps ----
+*.log
+
+# ---- Optional: ignore very noisy state (uncomment if it gets too big) ----
+# state/**
+

@@ -1,0 +1,20 @@
+
+[Unit]
+Description=Unifi OS Service
+After=network.target uosserver-updater.service
+Wants=uosserver-updater.service
+
+[Service]
+Type=simple
+ExecStart=/var/lib/uosserver/bin/uosserver-service
+ExecStop=/usr/bin/podman stop --time 120 uosserver
+WorkingDirectory=/var/lib/uosserver
+Restart=on-failure
+RestartSec=10
+StartLimitInterval=60
+StartLimitBurst=3
+User=uosserver
+Group=uosserver
+
+[Install]
+WantedBy=multi-user.target
