@@ -23,4 +23,4 @@ network:
       id: 20
       link: eth0
       addresses:
-        - 10.0.20.1/28
+        - 10.0.20.1/27
