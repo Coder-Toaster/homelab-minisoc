@@ -5,8 +5,7 @@ network:
   ethernets:
     eth0:
       dhcp4: no
-      addresses:
-        - 10.0.1.1/28 # VLAN1 - rescue f unifi
+      
     # WAN (modem)
     enx00e04c680469:
       dhcp4: yes
