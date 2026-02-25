@@ -1,31 +1,25 @@
-# ---- Secrets / keys / tokens ----
+# DHCP lease / state
+**/kea-leases*.csv
+**/kea-leases*.json
+**/kea-dhcp4.leases
+**/dhcpd.leases
+
+# Logs / runtime
+**/*.log
+**/log/**
+**/run/**
+**/tmp/**
+**/*.pid
+
+# Secrets / keys / certs (älä pushaa ikinä julkiseen repoon)
 **/*.key
 **/*.pem
 **/*.p12
 **/*.pfx
-**/secrets/**
-**/*token*
-**/*password*
-**/*private*
-**/.env
-**/.env.*
+**/wireguard/**
+**/ssh/**
 
-# ---- SSH keys (defensive) ----
-**/.ssh/**
-!**/.ssh/config
-
-# ---- Editor / OS junk ----
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-*~
-.vscode/
-.idea/
-
-# ---- Logs / dumps ----
-*.log
-
-# ---- Optional: ignore very noisy state (uncomment if it gets too big) ----
-# state/**
-
+# Linux sensitive
+**/shadow
+**/gshadow
+**/sudoers.d/*

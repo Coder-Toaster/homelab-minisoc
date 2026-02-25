@@ -1,0 +1,27 @@
+network:
+  version: 2
+  renderer: networkd
+
+  ethernets:
+    eth0:
+      dhcp4: no
+      addresses:
+        - 10.0.1.1/28 # VLAN1 - rescue f unifi
+    # WAN (modem)
+    enx00e04c680469:
+      dhcp4: yes
+
+  vlans:
+    # Management VLAN
+    vlan10:
+      id: 10
+      link: eth0
+      addresses:
+        - 10.0.10.1/24
+
+    # Smart Home VLAN
+    vlan20:
+      id: 20
+      link: eth0
+      addresses:
+        - 10.0.20.1/28
