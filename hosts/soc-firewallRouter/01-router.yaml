@@ -5,7 +5,9 @@ network:
   ethernets:
     eth0:
       dhcp4: no
-      
+      addresses:
+        - 10.0.1.1/24
+
     # WAN (modem)
     enx00e04c680469:
       dhcp4: yes
@@ -24,3 +26,17 @@ network:
       link: eth0
       addresses:
         - 10.0.20.1/27
+
+    # Home Lab
+    vlan30:
+      id: 30
+      link: eth0
+      addresses:
+        - 10.0.30.1/28
+
+    # NAS
+    vlan40:
+      id: 40
+      link: eth0
+      addresses:
+        - 10.0.40.1/30

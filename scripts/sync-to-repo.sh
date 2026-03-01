@@ -10,6 +10,7 @@ FILES=(
   "/etc/nftables.conf"
   "/etc/kea/kea-dhcp4.conf"
   "/etc/netplan/01-router.yaml"
+  "/etc/unbound/unbound.conf.d/router.conf"
 )
 
 # With what permissions is the file copied to repo
