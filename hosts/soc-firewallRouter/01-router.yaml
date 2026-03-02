@@ -39,4 +39,4 @@ network:
       id: 40
       link: eth0
       addresses:
-        - 10.0.40.1/30
+        - 10.0.40.1/28
